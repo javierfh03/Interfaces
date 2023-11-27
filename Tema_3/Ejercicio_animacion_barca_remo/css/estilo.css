@@ -1,0 +1,60 @@
+body {
+    background-image: url(../img/rio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#puente {
+    position: absolute;
+    top: 45%;
+    right: 40%;
+    width: 400px;
+    height: 450px;
+}
+
+#conjunto {
+    position: absolute;
+    top: 62%;
+    width: 600px;
+    height: 300px;
+    animation: movimiento 18s infinite;
+}
+
+#gondola {
+    position: absolute;
+    width: 550px;
+}
+
+#pala {
+    position: absolute;
+    width: 40px;
+    top: -20%;
+    left: 20px;
+    height: 290px;
+    animation: movimientoPala 1s infinite;
+}
+
+@keyframes movimiento {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes movimientoPala {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}

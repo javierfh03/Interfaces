@@ -1,0 +1,61 @@
+body {
+    margin: 0px;
+}
+
+header {
+    border-bottom: 1px solid #b8babc;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+#instagramLogos {
+    float: left;
+    vertical-align: middle;
+}
+
+nav {
+    float: left;
+    border: 1px solid #b8babc;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 3px;
+}
+
+nav, nav * {
+    background-color: #fafafa;
+    vertical-align: middle;
+}
+
+#post {
+    border: #b8babc 1px solid;
+    margin-bottom: 1em;
+    display: block;
+    margin: auto;
+    border-radius: 3px;
+}
+
+#actions {
+    border-bottom: #b8babc 1px solid;
+    padding-top: 10px;
+    padding: 10px;
+}
+
+#profile {
+    border-bottom: #b8babc 1px solid;
+}
+
+#comments {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: #b8babc 1px solid;
+}
+
+#login {
+    padding: 5px;
+}
+
+#postInfo {
+    border-bottom: 1px gainsboro solid;
+    padding: 10px;
+}

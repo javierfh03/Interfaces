@@ -1,0 +1,80 @@
+input:enabled:hover, .speedButton:enabled:hover, .weaponButton:enabled:hover, .smallButton:enabled:hover, 
+#emergencyButton:enabled:hover, .moveSidesButton:enabled:hover, #moveStraight:enabled:hover {
+    animation: selection 1s infinite;
+}
+
+#shipDiagarmTopLinesButton:enabled:hover ~ div input {
+    animation: selection 1s infinite;
+}
+
+@keyframes selection {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.appearPlanet {
+    animation: appearPlanet 3s;
+}
+
+.disappearPlanet {
+    animation: appearPlanet 1s forwards reverse;
+}
+
+@keyframes appearPlanet {
+    0% {
+        scale: 0.6;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.explorePlanet {
+    z-index: 1;
+    animation: selectPlanet 2s forwards;
+}
+
+.exploredPlanet {
+    filter: grayscale(100%);
+}
+
+.unselectPlanet {
+    z-index: 1;
+    animation: selectPlanet 2s forwards reverse;
+}
+
+@keyframes selectPlanet {
+    100% {
+        top: 25%;
+        transform: translateX(-50%) scale(2);
+        left: 50%;
+    }
+}
+
+.hidenPlanetComputer {
+    transition: all 0.7s;
+}
+
+.visiblePlanetComputer {
+    transition: all 0.7s 1.5s;
+}
+
+#solarSystemNameContainer {
+    animation: newSolarSystem forwards 0.5s 1s;
+}
+
+@keyframes newSolarSystem {
+    100% {
+        opacity: 0;
+    }
+}

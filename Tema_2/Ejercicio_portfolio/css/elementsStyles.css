@@ -1,0 +1,45 @@
+h1, h2, .textInfo {
+    color: #ff0000;
+}
+
+a {
+    text-decoration: none;
+}
+
+.listExperiencie {
+    list-style: "- ";
+}
+
+.listInfoExperiencie {
+    list-style: "# ";
+}
+
+li::marker {
+    color: #ff0000;
+}
+
+.infoText {
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin: 10px 0;
+}
+
+.terminalName {
+    color: #09ff00;
+}
+
+.terminalHome, .folder {
+    color: #0051ff;
+}
+
+.file, .folder {
+    margin-right: 10px;
+}
+
+.command {
+    border: none;
+    background: none;
+    color: #ffffff;
+    outline: none;
+    margin-left: 2px;
+}

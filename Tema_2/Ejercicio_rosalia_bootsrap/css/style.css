@@ -1,0 +1,76 @@
+#instagramIcon {
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#instagramLogo {
+    height: 30px;
+    vertical-align: middle;
+}
+
+#instagramShearch {
+    height: 15px;
+}
+
+.userIcon, .userHistory {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+
+.userHistory {
+    border-radius: 100%;
+    border: 1px solid rgb(255, 0, 200);
+}
+
+#verificado {
+    width: 15px;
+}
+
+#mas {
+    width: 30px;
+    margin: auto;
+    display: block;
+}
+
+#meGusta, #comentario, #enviar, #guardar {
+    width: 30px;
+}
+
+#guardar {
+    float: right;
+}
+
+#search {
+    border: 0;
+    padding-left: 10px;
+    outline: none;
+    color: #b8babc;
+    font-size: 14px;
+    width: 50px;
+}
+
+.dateComment, .location {
+    float: left;
+    color: #b8babc;
+    font-size: 12px;
+}
+
+.username {
+    text-decoration: none;
+    color: black;
+}
+
+#follow, #login a {
+    text-decoration: none;
+}
+
+#postDate {
+    font-size: 12px;
+    color: #b8babc;
+}
+
+#login p {
+    color: #b8babc;
+}

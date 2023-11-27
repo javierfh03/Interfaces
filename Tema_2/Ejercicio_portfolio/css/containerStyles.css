@@ -1,0 +1,45 @@
+body {
+    background-color: #000000;
+    font: 1.3rem Inconsolata, monospace;
+    color: #ffffff; 
+    margin: 0px;
+    
+}
+
+body * {
+    margin: 0px;
+}
+
+main {
+    padding: 5px;
+    overflow-y: scroll; 
+}
+
+main p {
+    margin-bottom: 2px;
+}
+
+.aboutMe {
+    display: flex;
+    flex-flow: row;
+}
+
+.containerInfo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.containerInfo div p {
+    margin-bottom: 6px;
+}
+
+.meetMeContainer, .proyectInfo {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.mesaImage {
+    margin-right: 5px;
+}

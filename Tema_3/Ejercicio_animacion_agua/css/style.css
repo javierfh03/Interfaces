@@ -1,0 +1,47 @@
+body {
+    background-image: url(../img/mar.jpeg);
+    overflow: hidden;
+}
+
+main div {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #d7d7d7;
+    border-radius: 1000px;
+    transform-origin: left top;
+}
+
+.gota1 {
+    animation: gota 4s infinite;
+}
+
+.gota2 {
+    animation: gota 4s infinite;
+    animation-delay: 0.5s;
+}
+
+.gota3 {
+    animation: gota 4s infinite;
+    animation-delay: 0.6s;
+}
+
+.gota4 {
+    animation: gota 4s infinite;
+    animation-delay: 0.7s;
+}
+
+.gota5 {
+    animation: gota 4s infinite;
+    animation-delay: 0.9s;
+}
+
+@keyframes gota {
+    0% { scale: 0.1; }
+    50% { opacity: 1; }
+    100% { scale: 11;  opacity: 0; }
+}

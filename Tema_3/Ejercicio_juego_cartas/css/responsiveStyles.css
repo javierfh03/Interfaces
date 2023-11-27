@@ -1,0 +1,23 @@
+/* Movil */
+@media only screen and (min-width: 350px) {
+    .carta, .reves, .frontal {
+        height: 200px;
+        width: 145px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 700px) {
+    .carta, .reves, .frontal {
+        height: 400px;
+        width: 285px;
+    }
+}
+
+/* PC */
+@media only screen and (min-width: 1000px) {
+    .carta, .reves, .frontal {
+        height: 600px;
+        width: 430px;
+    }
+}

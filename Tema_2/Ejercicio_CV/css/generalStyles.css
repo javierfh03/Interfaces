@@ -1,0 +1,17 @@
+:root {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+body {
+    background-color: #D9D9D9;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+}

@@ -1,0 +1,33 @@
+#pieza1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#pieza2 {
+    position: absolute;
+    left: 0;
+    top: 153px;
+}
+
+#pieza3 {
+    position: absolute;
+    left: 227px;
+    top: 0;
+}
+
+#pieza4 {
+    position: absolute;
+    top: 227px;
+    left: 153px;
+}
+
+img {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+img:hover {
+    opacity: 1;
+    
+}

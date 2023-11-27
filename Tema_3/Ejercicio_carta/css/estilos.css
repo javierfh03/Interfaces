@@ -1,0 +1,29 @@
+#reves, #frontal {
+    position: absolute;
+    height: 600px;
+    width: 431px;
+}
+
+#reves {
+    background-image: url(../img/carta-reves.png);
+    z-index: 10;
+    transition: all 0.5s;
+}
+
+#frontal {
+    background-image: url(../img/carta-frontal.png);
+    z-index: 0;
+    transition: all 0.5s;
+}
+
+#carta:hover > div {
+    transform: rotateY(180deg);
+}
+
+#carta:hover #reves{
+    z-index: 0;
+}
+
+#carta:hover #frontal {
+    z-index: 10;
+}

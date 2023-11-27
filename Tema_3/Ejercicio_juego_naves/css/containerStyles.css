@@ -1,0 +1,329 @@
+body {
+    color: #09ff00;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    margin: 0;
+}
+
+#valuesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+#unitContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.valueContainer, #solarSystemNameContainer, #descriptionContainer {
+    background-color: #6e5f55;
+    border: #161311 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.valueContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.valueContainer span {
+    width: 130px;
+}
+
+.valueContainer span, #solarSystemName, #descriptionContainer span {
+    background-color: black;
+    color: #09ff00;
+    padding: 10px;
+    text-align: center;
+}
+
+#descriptionContainer span {
+    width: 200px;
+    overflow: auto;
+}
+
+#solarSystemNameContainer {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    width: 600px;
+    height: 110px;
+}
+
+#solarSystemName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 560px;
+    text-align: center;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+}
+
+#descriptionContainer {
+    height: 290px;
+    width: 200px;
+    font-size: 17px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#computer {
+    position: absolute;
+    background-color: #6e5f55;
+    transform:  translateX(-50%) perspective(500px) rotateX(25deg);
+    left: 50%;
+    bottom: 0%;
+    z-index: 3;
+}
+
+#controls {
+    padding: 10px;
+    position: relative;
+    background-color: black;
+    transform:  translate(-50%, -100%);
+    left: 50%;
+    top: 100%;
+}
+
+#interfaces > div {
+    height: 200px;
+    padding: 5px;
+}
+
+#selectionContainer {
+    border: #09ff00 solid 1px;
+}
+
+#selectionButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #09ff00
+}
+
+#shieldInterface {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#shieldInterface div {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+
+#prowShieldContainer {
+    position: absolute;
+    top: 54%;
+    left: 21.5%;
+}
+
+#sternShieldContainer {
+    position: absolute;
+    top: 53.5%;
+    left: 64%;
+}
+
+#portShieldContainer {
+    position: absolute;
+    bottom: 15.5%;
+    left: 59%;
+}
+
+#starboardShieldContainer {
+    position: absolute;
+    top: 26%;
+    left: 21.5%;
+}
+
+#thrusterInterface {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+.thrusterInterfaceControls {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 230px;
+}
+
+#leftButtons, #rightButtons {
+    width: 170px;
+}
+
+#diagramButtons {
+    width: 185px;
+}
+
+#leftButtons, #rightButtons, #diagramButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#speedControls {
+    margin-bottom: 1em;
+}
+
+
+#laserContainer {
+    position: absolute;
+    bottom: 39%;
+    left: 6%;
+}
+
+#nuclearContainer {
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+}
+
+#jumpEngineInterface {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#jumpContainer {
+    text-align: center;
+    padding: 5px;
+}
+
+#planetComputer {
+    position: absolute;
+    background-color: #5e5047;
+    transform:  translateX(-50%);
+    left: 50%;
+    align-items: center;
+    z-index: 3;
+}
+
+#battleScreen, #planetScreen {
+    position: absolute;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#planetScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#endGameContainer {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 10;
+}
+
+/* 700p */
+@media only screen and (min-width: 700px) {
+    #computer {
+        width: 600px;
+        height: 190px;
+    }
+
+    #controls {
+        width: 545px;
+        height: 160px;
+    }
+}
+
+/* 1000p */
+@media only screen and (min-width: 1000px) {
+    body {
+        font: 1rem Inconsolata, monospace;
+    }
+
+    #computer {
+        width: 950px;
+        height: 280px;
+    }
+
+    #controls {
+        width: 895px;
+        height: 250px;
+    }
+
+    #planetComputer {
+        width: 800px;
+        height: 320px;
+    }
+
+    #battleScreen, #planetScreen {
+        width: 750px;
+        height: 265px;
+    }
+
+    .hidenPlanetComputer {
+        bottom: -300px;
+    }
+    
+    .visiblePlanetComputer {
+        bottom: 250px;
+    }
+}
+
+/* 1550p */
+@media only screen and (min-width: 1550px) {
+    body {
+        font: 1.3rem Inconsolata, monospace;
+    }
+
+    #computer {
+        width: 1050px;
+        height: 340px;
+    }
+
+    #controls {
+        width: 995px;
+        height: 310px;
+    }
+
+    #planetComputer {
+        width: 800px;
+        height: 420px;
+    }
+
+    #battleScreen, #planetScreen {
+        width: 750px;
+        height: 365px;
+    }
+
+    .hidenPlanetComputer {
+        bottom: -300px;
+    }
+    
+    .visiblePlanetComputer {
+        bottom: 300px;
+    }
+}

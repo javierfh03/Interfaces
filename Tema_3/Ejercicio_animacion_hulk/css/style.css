@@ -1,0 +1,162 @@
+body {
+    background-image: url(../img/logroño.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#vegeta777 {
+    position: absolute;
+    width: 200px;
+    right: 5%;
+    bottom: 0%;
+    animation: vegetaTranformacion 0.7s forwards 0.5s;
+    transform-origin: bottom;
+}
+
+#c15 {
+    position: absolute;
+    width: 500px;
+    bottom: 0%;
+    animation: c15Movimiento 2s forwards 0s, c15Gira 0.1s forwards 1.5s, c15Chata 0.5s forwards 2s, c15Inclina 0.5s forwards 3s, c15Vuela 0.5s forwards 3.2s;
+}
+
+#hulk {
+    opacity: 0;
+    position: absolute;
+    right: 5%;
+    bottom: 0%;
+    animation: hulkAparece 1.5s forwards 0.7s;
+}
+
+#cuerpo {
+    position: relative;
+    width: 300px;
+}
+
+#brazo1 {
+    position: absolute;
+    width: 300px;
+    right: 150px;
+    top: 110px;
+    rotate: -40deg;
+    animation: hulkAplastaBrazo1C15 2s normal 2s;
+}
+
+#brazo2 {
+    position: absolute;
+    width: 200px;
+    top: 90px;
+    right: 20px;
+    rotate: -30deg;
+    animation: hulkAplastaBrazo2C15 2s normal 2s;
+}
+
+@keyframes c15Movimiento {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 6%;
+    }
+}
+
+@keyframes c15Gira {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: -50deg;
+    }
+}
+
+@keyframes c15Inclina {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        left: 67%;
+        bottom: 330px;
+        rotate: 40deg;
+    }
+}
+
+@keyframes c15Chata {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(50deg);
+    }
+}
+
+@keyframes c15Vuela{
+    0% {
+        left: 67%;
+        bottom: 330px;
+        rotate: 40deg;
+    }
+
+    100% {
+        rotate: 1000deg;
+        top: 0px;
+        left: -400px;
+    }
+}
+
+@keyframes vegetaTranformacion {
+    0% {
+        opacity: 1;
+    }
+
+    95% {
+        transform: scaleY(1.5) scaleX(2) translateX(-20%);
+        filter: hue-rotate(120deg);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hulkAparece {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hulkAplastaBrazo1C15 {
+    50% {
+        right: 130px;
+        top: 120px;
+        rotate: -50deg;
+    }
+
+    100% {
+        top: -35px;
+        right: 150px;
+        rotate: 50deg;
+    }
+}
+
+@keyframes hulkAplastaBrazo2C15 {
+    50% {
+        top: 90px;
+        right: 30px;
+        rotate: -10deg;
+    }
+
+    100% {
+        top: -25px;
+        right: 40px;
+        rotate: 70deg;
+    }
+}

@@ -1,0 +1,65 @@
+img, #container {
+    position: absolute;
+}
+
+#container {
+    width: 500px;
+    height: 900px;
+}
+
+#hoya {
+    left: 50px;
+    top: 430px;
+}
+
+#humo {
+    left: 100px;
+    opacity: 0;
+}
+
+#container:hover #humo {
+    opacity: 1;
+    transition: opacity 0.5s 1s;
+}
+
+#ramenNormal {
+    left: 50px;
+    top: 320px;
+}
+
+#ramenCocinado {
+    left: 50px;
+    top: 320px;
+    opacity: 0;
+}
+
+#container:hover #ramenCocinado {
+    opacity: 1;
+    transition: opacity 0.5s 5s;
+}
+
+#ramenQuemado {
+    left: 50px;
+    top: 320px;
+    opacity: 0;
+}
+
+#container:hover #ramenQuemado {
+    opacity: 1;
+    transition: opacity 0.5s 10s;
+}
+
+#fuego {
+    top: 500px;
+    left: 80px;
+    opacity: 0;
+}
+
+#container:hover #fuego {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#palos {
+    top: 800px;
+}

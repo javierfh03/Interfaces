@@ -1,0 +1,39 @@
+p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+span {
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 15px;
+}
+
+header span, h1 {
+    color: #FFFFFF;
+}
+
+.date {
+    font-size: 11px;
+}
+
+.aboutMe {
+    font-size: 13px;
+}

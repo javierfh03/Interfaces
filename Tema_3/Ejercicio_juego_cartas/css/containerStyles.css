@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.carta {
+    position: relative;
+    margin: 5px;
+}
+
+.reves, .frontal {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

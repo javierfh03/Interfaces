@@ -1,0 +1,81 @@
+/* Movil */
+@media only screen and (min-width: 350px) {
+    nav {
+        width: 140px;
+    }
+
+    #instagramLogos {
+        width: 160px;
+        padding-right: 3%;
+    }
+    
+    header {
+        padding-left: 4%;
+    }
+
+    #imagenRosa, #post {
+        width: 350px;
+    }
+
+    #mas {
+        padding: 10px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 800px) {
+    main {
+        margin-top: 2em;
+    }
+
+    nav {
+        width: 240px;
+    }
+
+    #instagramLogos {
+        width: 160px;
+        padding-right: 20%;
+    }
+
+    #imagenRosa  {
+        float: left;
+        width: 440px;
+    }
+
+    #imageInfo {
+        float: left;
+        width: 350px;
+    }
+
+    #post {
+        width: 790px;
+    }
+
+    #mas {
+        padding: 5px;
+    }
+
+    #comments {
+        padding-bottom: 10px;
+    }
+}
+
+/* PC */
+@media only screen and (min-width: 1000px) {
+    #imagenRosa  {
+        float: left;
+        width: 550px;
+    }
+
+    #post {
+        width: 900px;
+    }
+
+    #mas {
+        padding: 20px;
+    }
+
+    #comments {
+        padding-bottom: 110px;
+    }
+}

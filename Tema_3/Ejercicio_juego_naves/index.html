@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Space wars</title>
+    <meta name='viewport' content='width=device-width, initialScale=1'>
+    <link rel="icon" type="image/x-icon" href="img/icons/icon.ico">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/containerStyles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/imageStyles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/elementStyles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/animationsStyles.css'>
+</head>
+
+<body>
+    <main style="display: '';">
+        <div id="endGameContainer" style="display: none;">
+            <h2 id="endGameText"></h2>
+        </div>
+    
+        <div id="valuesContainer">
+            <div class="valueContainer">
+                <img src="img/icons/hourglass.png" class="valueIcon">
+                <span id="time">00:00</span>
+            </div>
+            <div id="unitContainer">
+                <div class="valueContainer">
+                    <img src="img/icons/thruster.png" class="valueIcon">
+                    <span id="energy">0</span>
+                </div>
+                <div class="valueContainer">
+                    <img src="img/icons/shield.png" class="valueIcon">
+                    <span id="shield">0</span>
+                </div>
+                <div class="valueContainer">
+                    <img src="img/icons/survivor.png" class="valueIcon">
+                    <span id="tripulation">0</span>
+                </div>
+            </div>
+        </div>
+    
+        <div id="descriptionContainer">
+            <span></span>
+        </div>
+    
+        <div id="solarSystemContainer"></div>
+    
+        <div id="planetComputer" class="hidenPlanetComputer">
+            <div id="planetScreen" class="hidenPlanetScreen">
+    
+            </div>
+    
+            <div id="battleScreen" class="hidenPlanetScreen">
+                <table id="battleBoard">
+                </table>
+            </div>
+        </div>
+        <div id="computer">
+            <div id="controls">
+                <div id="jumpContainer">
+                    <span>Engine overheating:</span>
+                    <progress id="jumpProgress" class="jumpProgressGreen" max="100"></progress>
+                </div>
+                <div id="selectionContainer">
+                    <div id="selectionButtonsContainer">
+                        <button id="shieldButton" class="selectionButtons selectedInterfaceButton"
+                            onclick="seeNewInterface('shieldInterface', this)">Shield</button>
+                        <button id="thursterButton" class="selectionButtons"
+                            onclick="seeNewInterface('thrusterInterface', this)">Thruster</button>
+                        <button id="weaponButton" class="selectionButtons"
+                            onclick="seeNewInterface('weaponInterface', this)">Weapon</button>
+                        <button id="jumpButton" class="selectionButtons"
+                            onclick="seeNewInterface('jumpEngineInterface', this)">Jump engine</button>
+                    </div>
+    
+                    <div id="interfaces">
+                        <div id="shieldInterface">
+                            <button id="shipDiagarmTopLinesButton" class="battleInput" disabled onclick="equalShieldControls()" >
+                                <img src="img/diagrams/ncc1701TopDiagramLines.png" id="shipDiagarmTopLines">
+                            </button>
+                            <div id="prowShieldContainer">
+                                <label for="prowShield">Prow:</label>
+                                <input type="range" id="prowShield" class="battleInput"  min="0" max="100" value="25"
+                                    onchange="shieldControls(this)" disabled>
+                            </div>
+                            <div id="sternShieldContainer">
+                                <label for="sternShield">Stern:</label>
+                                <input type="range" class="battleInput" id="sternShield" min="0" max="100" value="25"
+                                    onchange="shieldControls(this)" disabled>
+                            </div>
+                            <div id="portShieldContainer">
+                                <label for="portShield">Port:</label>
+                                <input type="range" class="battleInput" id="portShield" min="0" max="100" value="25"
+                                    onchange="shieldControls(this)" disabled>
+                            </div>
+                            <div id="starboardShieldContainer">
+                                <label for="starboardShield">Starboard:</label>
+                                <input type="range" class="battleInput" id="starboardShield" min="0" max="100" value="25"
+                                    onchange="shieldControls(this)" disabled>
+                            </div>
+                        </div>
+    
+                        <div id="thrusterInterface" style="display: none;">
+                            <div class="thrusterInterfaceControls">
+                                <div id="speedControls">
+                                    <label for="speedSlider">Speed:</label>
+                                    <meter id="speedSlider" min="0" max="1000" value="0"></meter>
+                                </div>
+                                <div class="variusButtonsInterfaceControls">
+                                    <button type="button" class="speedButton battleInput" onclick="changeSpeed(-100)" disabled>-100km/h</button>
+                                    <button type="button" class="speedButton battleInput" onclick="changeSpeed(100)" disabled>+100km/h</button>
+                                </div>
+                            </div>
+                            <div id="moveButtonsContainer" class="thrusterInterfaceControls">
+                                <div id="leftButtons">
+                                    <button type="button" class="moveSidesButton battleInput" onclick="turnWithBottom('L')" disabled><img
+                                            class="arrowLeft" src="img/icons/arrow.png"></button>
+                                    <button type="button" class="moveSidesButton battleInput" onclick="turnWithMiddle('L')" disabled><img
+                                            class="arrowLeft" src="img/icons/arrow.png"></button>
+                                    <button type="button" class="moveSidesButton battleInput" onclick="turnWithHead('L')" disabled><img
+                                            class="arrowLeft" src="img/icons/arrow.png"></button>
+                                </div>
+                                <div id="diagramButtons">
+                                    <img src="img/diagrams/ncc1701TopDiagram.png" id="shipDiagarmTop">
+                                    <button type="button" id="moveStraight" class="battleInput" onclick="turnStraight()" disabled><img
+                                            class="arrowStraight" src="img/icons/arrow.png"></button>
+                                </div>
+                                <div id="rightButtons">
+                                    <button type="button" class="moveSidesButton battleInput" onclick="turnWithBottom('R')" disabled><img
+                                            class="arrowRight" src="img/icons/arrow.png"></button>
+                                    <button type="button" class="moveSidesButton battleInput" onclick="turnWithMiddle('R')" disabled><img
+                                            class="arrowRight" src="img/icons/arrow.png"></button>
+                                    <button type="button" class="moveSidesButton battleInput" onclick="turnWithHead('R')" disabled><img
+                                            class="arrowRight" src="img/icons/arrow.png"></button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="weaponInterface" style="display: none;">
+                            <img src="img/diagrams/ncc1701LateralDiagramLateralLines.png" id="shipDiagarmLateral">
+                            <div id="laserContainer">
+                                <label for="laserWeapon">Lassers: <span id="lassers"></span></label>
+                                <button type="button" id="laserWeapon" class="weaponButton battleInput" value="5" onclick="shootLaserWeapon()" disabled>Shoot</button>
+                                <button id="reloadButton" type="button" class="weaponButton battleInput" onclick="reloadLaser()" disabled>Reload</button>
+                            </div>
+                            <div id="nuclearContainer">
+                                <label for="nuclearWeapon">Nuclear missiles: <span id="nuclearMissile"></span></label>
+                                <button type="button" id="nuclearWeapon" class="weaponButton battleInput" onclick="shotNuclearBoomb()" disabled>Shoot</button>
+                            </div>
+                        </div>
+    
+                        <div id="jumpEngineInterface" style="display: none;">
+                            <div>
+                                <label for="refrigerateEngine">Refrigerate engine: <span
+                                        id="refrigeratePercentage"></span></label><br>
+                                <input type="range" id="refrigerateEngine" min="0" max="10" value="0"
+                                    onchange="refrigerateEng()">
+                            </div>
+                            <button id="emergencyButton" type="button" onclick="emergencyJump()" disabled>Emergency jump</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="solarSystemNameContainer">
+            <span id="solarSystemName"></span>
+        </div>
+    </main>
+    <script src="js/classes/audio/AudioManager.js"></script>
+    <script src="js/classes/battle/BattlePosition.js"></script>
+    <script src="js/classes/battle/HeroPosition.js"></script>
+    <script src="js/classes/battle/BattleShips.js"></script>
+    <script src="js/classes/ships/Ship.js"></script>
+    <script src="js/classes/ships/EnemyShip.js"></script>
+    <script src="js/classes/ships/HeroShip.js"></script>
+    <script src="js/classes/planets/Planet.js"></script>
+    <script src="js/classes/planets/HostilePlanet.js"></script>
+    <script src="js/classes/planets/PeacefullPlanet.js"></script>
+    <script src="js/classes/planets/SolarSystem.js"></script>
+    <script src="js/controls/engineJumpControls.js"></script>
+    <script src="js/controls/shieldControls.js"></script>
+    <script src="js/controls/interfaceControls.js"></script>
+    <script src="js/gameManager/cookiesManager.js"></script>
+    <script src="js/gameManager/endGameManager.js"></script>
+    <script src="js/gameManager/valuesManager.js"></script>
+    <script src="js/gameManager/planetsManager.js"></script>
+    <script src="js/gameManager/boardManager.js"></script>
+    <script src="js/controls/weaponControls.js"></script>
+    <script src="js/controls/thrusterConrols.js"></script>
+    <script src="js/gameManager/timeManager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

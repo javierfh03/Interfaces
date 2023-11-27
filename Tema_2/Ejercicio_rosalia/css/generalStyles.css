@@ -1,0 +1,76 @@
+body {
+    font-family: "Segoe UI";
+}
+
+.verticalLine {
+    border-left: 1px black solid;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.clear-both {
+    padding: 0; 
+    margin: 0; 
+    width: 100%;
+    height: 1px; 
+    background-color: transparent;
+    clear: both; 
+}
+
+.username {
+    text-decoration: none;
+    color: black;
+}
+
+#search {
+    border: 0;
+    padding-left: 10px;
+    outline: none;
+    color: #b8babc;
+    font-size: 14px;
+    width: 40px;
+}
+
+.textComment {
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+.dateComment, .location {
+    float: left;
+    color: #b8babc;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+
+.comment p, #postInfo p {
+    float: left;
+    width: 270px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+.dateComment snap {
+    margin-right: 10px;
+}
+
+#login p {
+    color: #b8babc;
+}
+
+#postDate {
+    font-size: 12px;
+    color: #b8babc;
+}
+
+#follow, #login a {
+    text-decoration: none;
+}
+
+#login a {
+    color: blue;
+}

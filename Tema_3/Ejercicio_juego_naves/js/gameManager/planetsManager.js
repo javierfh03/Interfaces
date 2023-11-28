@@ -28,7 +28,7 @@ const putPlanets = (solarSystem = new SolarSystem()) => {
             document.getElementById("descriptionContainer").appendChild(descriptionText)
         })
 
-        planet.element.addEventListener("mouseleave", () => {
+       planet.element.addEventListener("mouseleave", () => {
             descriptionContainer.innerHTML = ""
             descriptionContainer.appendChild(document.createElement("span"))
         })

@@ -102,7 +102,7 @@ const getPlanetValues = () => {
     planetScreen.innerHTML += `<p>Shield: ${selectedPlanet.shield}</p>`
     planetScreen.innerHTML += `<p>Nuclear missile: ${selectedPlanet.missile}</p>`
     planetScreen.innerHTML += `<p>Tripulation: ${selectedPlanet.tripulation}</p>`
-    planetScreen.innerHTML += `<button type="button" class="smallButton" onclick="closePlanet()">Close</button>`
+    setTimeout(() => { planetScreen.innerHTML += `<button type="button" class="smallButton" onclick="closePlanet()">Close</button>`}, 2000);
 }
 
 var closePlanet = () => {
